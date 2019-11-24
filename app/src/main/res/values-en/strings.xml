@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="table_head_abfahrt">Dep.</string>
+    <string name="table_head_verspaetung">Delay</string>
+    <string name="table_head_linie">Line</string>
+    <string name="table_head_richtung">Direction</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_reset">reset</string>
+    <string name="app_about">about ...</string>
+    <string name="app_page_reset">reseted</string>
+    <string name="app_ride_on_time">on time</string>
+    <string name="app_ride_cancelled">cancelled</string>
+    <string name="app_default_haltestelle">Please choose stop -></string>
+    <string name="app_aktualisieren_button">Refresh</string>
+    <string name="app_aktualisierungstext_initial_app">last refresh: ...</string>
+    <string name="app_aktualisierungstext_initial">last refresh: -</string>
+    <string name="app_aktualisierungstext">last refresh:</string>
+    <string name="app_aktualisierungstextroundbracket">last refresh (</string>
+    <string name="app_ueber_title">about Haltestellenanzeige</string>
+    <string name="app_gleisabkuerzung">Pf.</string>
+    <string name="app_delay_unit_minutes">min.</string>
+    <string name="app_vorwaerts">forward</string>
+    <string name="app_rueckwaerts">backward</string>
+    <string name="app_haltestellensuche">Stop search</string>
+    <string name="app_haltestellensuche_teil">Enter part of the stop name:</string>
+    <string name="app_haltestellensuche_button">Search stop</string>
+    <string name="app_haltestellensuche_loeschen">Delete search input</string>
+    <string name="app_auto_refresh">automatic refresh of display</string>
+    <string name="app_no_network">No network</string>
+
+</resources>

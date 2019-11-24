@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64BA32</color>
+    <color name="colorPrimaryDark">#009632</color>
+    <color name="colorAccent">#F8F32D</color>
+    <color name="colorBorder">#60668866</color>
+    <color name="colorBG">#E0002000</color>
+    <color name="colorTableHeaderBG">#80668866</color>
+</resources>

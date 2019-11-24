@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/haltestellen_appwidget"
+    android:initialLayout="@layout/haltestellen_appwidget"
+    android:minHeight="160dp"
+    android:minWidth="320dp"
+    android:previewImage="@drawable/stationboardpreview"
+    android:resizeMode="vertical|horizontal"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen"></appwidget-provider>

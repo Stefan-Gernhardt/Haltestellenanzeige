@@ -1,0 +1,2514 @@
+<GridLayout android:layout_width="match_parent"
+    android:id="@+id/widgetLayout"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:background="@drawable/border"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/leerzeichen1"
+            android:layout_height="wrap_content"
+            android:layout_width="42dp"
+            android:textColor="#FFFFFFFF"
+            android:gravity="left"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/textViewStationNameWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:text="@string/app_default_haltestelle"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/changeStationButtonWidget"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/leerzeichen2"
+            android:layout_height="wrap_content"
+            android:layout_width="42dp"
+            android:textColor="#FFFFFFFF"
+            android:gravity="right"
+            android:text=" " />
+    </LinearLayout>
+
+    <RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/refreshButtonWidget"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:text="↻" />
+
+            <TextView
+                android:id="@+id/textViewLetzteAktualisierungWidget"
+                android:maxLines="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#FFFFFFFF"
+                android:text="@string/app_aktualisierungstext_initial" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <GridLayout
+        android:columnCount="4"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidgetHeader"
+            android:maxLines="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:background="@color/colorTableHeaderBG"
+            android:text="@string/table_head_abfahrt"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewDelayWidgetHeader"
+            android:maxLines="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:background="@color/colorTableHeaderBG"
+            android:text="@string/table_head_verspaetung"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewLinieWidgetHeader"
+            android:maxLines="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:background="@color/colorTableHeaderBG"
+            android:text="@string/table_head_linie"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidgetHeader"
+            android:maxLines="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:background="@color/colorTableHeaderBG"
+            android:text="@string/table_head_richtung"
+            android:textSize="18sp" />
+    </GridLayout>
+
+
+    <GridLayout
+        android:columnCount="4"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget0"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget0"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget0"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget0"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget1"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget1"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget1"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget2"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget2"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget2"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget3"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget3"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget3"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget3"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget4"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget4"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget4"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget4"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget5"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget5"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget5"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget5"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget6"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget6"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget6"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget6"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget7"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget7"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget7"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget7"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget8"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget8"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget8"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget9"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget9"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget9"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget9"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget10"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget10"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget10"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget10"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget11"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget11"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget11"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget11"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget12"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget12"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget12"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget12"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget13"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget13"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget13"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget13"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget14"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget14"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget14"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget14"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget15"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget15"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget15"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget15"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget16"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget16"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget16"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget16"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget17"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget17"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget17"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget17"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget18"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget18"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget18"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget18"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget19"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget19"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget19"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget19"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget20"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget20"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget20"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget20"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget21"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget21"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget21"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget21"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget22"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget22"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget22"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget22"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget23"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget23"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget23"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget23"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget24"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget24"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget24"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget24"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget25"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget25"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget25"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget25"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget26"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget26"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget26"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget26"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget27"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget27"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget27"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget27"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget28"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget28"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget28"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget28"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget29"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget29"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget29"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget29"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget30"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget30"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget30"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget30"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget31"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget31"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget31"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget31"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget32"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget32"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget32"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget32"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget33"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget33"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget33"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget33"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget34"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget34"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget34"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget34"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget35"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget35"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget35"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget35"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget36"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget36"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget36"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget36"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget37"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget37"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget37"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget37"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget38"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget38"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget38"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget38"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget39"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget39"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget39"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget39"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget40"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget40"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget40"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget40"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget41"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget41"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget41"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget41"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget42"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget42"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget42"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget42"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget43"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget43"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget43"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget43"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget44"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget44"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget44"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget44"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget45"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget45"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget45"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget45"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget46"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget46"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget46"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget46"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget47"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget47"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget47"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget47"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget48"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget48"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget48"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget48"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewAbfahrtWidget49"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewDelayWidget49"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewLinieWidget49"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/textViewRichtungWidget49"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+
+            android:textColor="#FFFFFFFF"
+            android:text="..." />
+
+    </GridLayout>
+</GridLayout>

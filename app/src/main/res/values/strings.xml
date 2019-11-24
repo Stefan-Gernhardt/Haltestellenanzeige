@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">Haltestellenanzeige</string>
+    <string name="table_head_abfahrt">Abf.</string>
+    <string name="table_head_verspaetung">Versp.</string>
+    <string name="table_head_linie">Linie</string>
+    <string name="table_head_richtung">Richtung</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="app_reset">zurücksetzen</string>
+    <string name="app_about">über ...</string>
+    <string name="app_page_reset">Zurückgesetzt!</string>
+    <string name="app_ride_on_time">pktl.</string>
+    <string name="app_ride_cancelled">cancelled</string>
+    <string name="app_default_haltestelle">Bitte Haltestelle wählen -></string>
+    <string name="app_aktualisieren_button">Aktualisieren</string>
+    <string name="app_aktualisierungstext_initial_app">letzte Aktualisierung: ...</string>
+    <string name="app_aktualisierungstext_initial">letzte Aktualisierung: -</string>
+    <string name="app_aktualisierungstext">letzte Aktualisierung: </string>
+    <string name="app_aktualisierungstextroundbracket">letzte Aktualisierung (</string>
+    <string name="app_ueber_title">Über Haltestellenanzeige</string>
+    <string name="app_gleisabkuerzung">Gl.</string>
+    <string name="app_delay_unit_minutes">Min.</string>
+    <string name="app_vorwaerts">vorwärts</string>
+    <string name="app_rueckwaerts">rückwärts</string>
+    <string name="app_haltestellensuche">Haltestellensuche</string>
+    <string name="app_haltestellensuche_teil">Teil des Haltestellennamens eingeben:</string>
+    <string name="app_haltestellensuche_button">Haltestelle suchen</string>
+    <string name="app_haltestellensuche_loeschen">Suchfeld löschen</string>
+    <string name="app_auto_refresh">Anzeige automatisch Aktualisieren</string>
+    <string name="app_no_network">Kein Netzwerk</string>
+</resources>
