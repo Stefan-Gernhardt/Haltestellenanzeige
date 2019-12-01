@@ -1,0 +1,1 @@
+Displays the departure times of all stops in Germany (Display Monitor).

@@ -1,0 +1,5 @@
+Diese App ist für Pendler gedacht, die jeden Tag die gleichen Haltestellen benutzen.
+
+Für jede Haltestelle kann ein Abfahrtsmonitor erstellt werden, entweder in der App selber oder durch Widgets.
+
+Es werden alle Haltestellen in Deutschland unterstützt, teilweise mit Verspätungsinformationen.

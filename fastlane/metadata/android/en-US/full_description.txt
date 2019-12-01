@@ -1,0 +1,5 @@
+This app is intended for commuters who use the same stops every day.
+
+A departure monitor can be created for each stop, either in the app itself or through widgets.
+
+All stops in Germany are supported, some even with delay information
