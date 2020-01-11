@@ -14,7 +14,7 @@ import org.sge.haltestellenanzeige.util.Util;
 
 public class ParserDB extends Parser {
     public ParserDB() { }
-    public ParserDB(String htmlResponse) {
+    public  ParserDB(String htmlResponse) {
         parse(htmlResponse);
     }
 
@@ -262,6 +262,7 @@ public class ParserDB extends Parser {
                     countExceptions++;
                     System.out.println("parseSuggestionListResponse exception db: "); //NON-NLS
                     System.out.println("parseSuggestionListResponse row number: " + r); //NON-NLS
+                    e.printStackTrace(); //!! pd
                 }
             }
             System.out.println(); //NON-NLS
