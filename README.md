@@ -9,8 +9,12 @@ Für jede Haltestelle kann ein Abfahrtsmonitor erstellt werden, entweder in der 
 
 Es werden alle Haltestellen in Deutschland unterstützt, teilweise mit Verspätungsinformationen.
 
-Goolge Play Store:
-https://play.google.com/store/apps/details?id=org.sge.haltestellenanzeige
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/org.sge.haltestellenanzeige/)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">](https://play.google.com/store/apps/details?id=org.sge.haltestellenanzeige)
 
 ![Haltestellenanzeige](documentation/Hauptwache-App.png "Haltestellenanzeige")
 
